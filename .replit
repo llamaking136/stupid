@@ -1,2 +1,2 @@
 language = "cpp"
-run = "rm stupid;g++ stupid.cpp -o stupid;./stupid test.stupid"
+run = "chmod +x MAKE.sh;./MAKE.sh"

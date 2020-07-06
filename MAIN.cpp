@@ -4,11 +4,14 @@
 #include <fstream>
 #include <stdlib.h>
 #include <cstring>
-#include "header/stupid.hpp"
+#include "header/header.hpp"
 
 using namespace std;
 
 string stdlib[1] = {"PRINT"};
+string stderrs[2] = {
+    "func not found err", "data not found err"
+};
 string version = "0.1.0";
 string usage = "stupid <path/filename>;stupid compile <path/filename>";
 string data;
@@ -22,7 +25,10 @@ int main(int argc, char* argv[]) {
     if (strcmp(argv[1], "compile") == 0) {
         compile++;
     }
-    
+    if (compile == 1 && not argv[2]) {
+        cout << "usage: " << usage << endl;
+        return 0;
+    }
     // compileFile("helloworld");
     // cout << "ree" << endl;
     return 0;
