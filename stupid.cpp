@@ -2,9 +2,13 @@
 #include <sstream>
 #include <string>
 #include <fstream>
+#include <stdlib.h>
+#include <cstring>
+#include "header/stupid.hpp"
 
 using namespace std;
 
+string stdlib[1] = {"PRINT"};
 string version = "0.1.0";
 string usage = "stupid <path/filename>;stupid compile <path/filename>";
 string data;
@@ -15,9 +19,11 @@ int main(int argc, char* argv[]) {
         cout << "usage: " << usage << endl;
         return 0;
     }
-    if (argv[1] == "compile") {
+    if (strcmp(argv[1], "compile") == 0) {
         compile++;
     }
+    
+    // compileFile("helloworld");
     // cout << "ree" << endl;
     return 0;
 }
