@@ -17,6 +17,12 @@ string usage = "stupid <path/filename>;stupid compile <path/filename>";
 string data;
 int compile = 0;
 
+
+int interpreter() {
+    cout << "STUPID interpreter version " << version << endl;
+    while (true);
+}
+
 int main(int argc, char* argv[]) {
     if (not argv[1]) {
         cout << "usage: " << usage << endl;
@@ -29,6 +35,7 @@ int main(int argc, char* argv[]) {
         cout << "usage: " << usage << endl;
         return 0;
     }
+
     // compileFile("helloworld");
     // cout << "ree" << endl;
     return 0;
