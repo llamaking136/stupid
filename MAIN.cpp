@@ -7,6 +7,7 @@
 #include "header/header.hpp"
 
 using namespace std;
+using namespace header;
 
 string stdlib[1] = {"PRINT"};
 string stderrs[2] = {

@@ -6,10 +6,14 @@
 
 using namespace std;
 
-void compileFile(string path) {
-    cout << path << endl;
-}
+namespace header {
 
-void runFile(string path) {
-    // ree
+    void compileFile(string path) {
+        cout << path << endl;
+    }
+
+    void runFile(string path) {
+        // ree
+    }
+
 }
