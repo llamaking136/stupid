@@ -17,24 +17,26 @@ const string version = "0.1.0";
 const string usage = "stupid <path/filename>;stupid compile <path/filename>";
 const string data;
 int compile = 0;
-string toCompile = "ree";
+char* toCompile;
 
 int main(int argc, char* argv[]) {
     if (!argv[1]) {
         cout << "usage: " << usage << endl;
         return 0;
     }
-    if (strcmp(argv[1], "compile") == 0) {
-        compile++;
-    }
     if (compile == 1 && not argv[2]) {
         cout << "usage: " << usage << endl;
         return 0;
     }
-    /*
+    if (strcmp(argv[1], "compile") == 0) {
+        compile++;
+        toCompile = argv[2];
+    }
     if (!searchFile(toCompile)) {
-
-    } */
+        cout << toCompile << endl;
+        cout << "help me" << endl;
+        cout << searchFile(toCompile);
+    }
     // cout << "ree" << endl;
     return 0;
 }
