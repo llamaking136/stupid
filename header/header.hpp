@@ -8,7 +8,16 @@ using namespace std;
 
 namespace header {
 
-    void compileFile(string path) {
+    bool searchFile(const char *file) {
+        ifstream infile(file);
+        if (!infile.good()) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    void compileFile(const char *path) {
         cout << path << endl;
     }
 

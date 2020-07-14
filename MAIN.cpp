@@ -9,23 +9,18 @@
 using namespace std;
 using namespace header;
 
-string stdlib[1] = {"PRINT"};
-string stderrs[2] = {
+const string stdlib[1] = {"PRINT"};
+const string stderrs[2] = {
     "func not found err", "data not found err"
 };
-string version = "0.1.0";
-string usage = "stupid <path/filename>;stupid compile <path/filename>";
-string data;
+const string version = "0.1.0";
+const string usage = "stupid <path/filename>;stupid compile <path/filename>";
+const string data;
 int compile = 0;
-
-
-int interpreter() {
-    cout << "STUPID interpreter version " << version << endl;
-    while (true);
-}
+string toCompile = "ree";
 
 int main(int argc, char* argv[]) {
-    if (not argv[1]) {
+    if (!argv[1]) {
         cout << "usage: " << usage << endl;
         return 0;
     }
@@ -36,8 +31,10 @@ int main(int argc, char* argv[]) {
         cout << "usage: " << usage << endl;
         return 0;
     }
+    /*
+    if (!searchFile(toCompile)) {
 
-    // compileFile("helloworld");
+    } */
     // cout << "ree" << endl;
     return 0;
 }
