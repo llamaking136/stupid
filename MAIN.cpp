@@ -10,10 +10,6 @@
 using namespace std;
 using namespace header;
 
-const string stdlib[1] = {"PRINT"};
-const string stderrs[3] = {
-    "func not found", "data not found", "file not found"
-};
 const string version = "0.1.0"; // do i need to change this more often? // why cant i use public like in java?? java was based on c/c++!!!
 const string usage = "stupid <path/filename>;stupid compile <path/filename>";
 const string data;
@@ -55,9 +51,8 @@ int main(int argc, char* argv[]) {
         cout << stderrs[2] << " err" << endl; // to make it clear that it cant find the file
         return 1;
     }
-    if (true) { // dont mind, figuring out how to use it
-        
-    }
+    string token = getToken("PRINT 'HELLO, WORLD\n';");
+    cout << token << endl;
     // cout << "ree" << endl;
     return 0;
 }
