@@ -4,7 +4,7 @@
 #include <string.h>
 #include <fstream>
 #include <stdlib.h>
-#include "header/header.hpp" // do i really need this? i can just plop the functions here
+#include "header.hpp" // do i really need this? i can just plop the functions here
 // #import <stdio.h> // because why not?
 
 using namespace std;
