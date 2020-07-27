@@ -3,6 +3,7 @@
 #include <string>
 #include <fstream>
 #include <stdlib.h>
+#define VERSION "0.1.0"
 
 using namespace std;
 
